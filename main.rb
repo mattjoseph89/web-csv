@@ -9,11 +9,18 @@ get '/' do
 end
 
 get '/full' do
+  accounts = process_csv
   erb(:all, :locals => {:accounts => accounts})
 end
 
 get '/priya' do
-  erb(:accounts)
+  accounts = process_csv
+  erb(:priya, :locals => {:accounts => accounts})
+end
+
+get '/sonia' do
+  accounts = process_csv
+  erb(:sonia, :locals => {:accounts => accounts})
 end
 
 # get '/accounts' do
