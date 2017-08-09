@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Individual Account</title>
+<link rel="stylesheet" type="text/css" href="<%= url("/styles.css") %>">
+  <title> <%= name %>'s Account</title>
 </head>
 <body>
   <table>
     <tr>
-      <th>Account: <%= "Priya" %> | Balance: <%= accounts["Priya"][:tally].round(2) %> </th>
+      <th>Account: <%= name %> | Balance: <%= info[:tally].round(2) %> </th>
       <th></th>
       <th> </th>
     </tr>
@@ -14,7 +15,7 @@
       <th>Category</th>
       <th>Total Spent</th>
       <th>Average Transaction</th>
-    </tr><center><% accounts["Priya"][:categories].each do |category, c_info| %>
+    </tr><center><% info[:categories].each do |category, c_info| %>
     </center><tr>
       <td><%= category %></td>
       <td><center>$<%= c_info[:tally].round(2).to_s %></center></td>
