@@ -13,13 +13,17 @@ get '/full' do
   erb(:all, :locals => {:accounts => accounts})
 end
 
-get '/priya' do
+get '/ind' do
   accounts = process_csv
-  erb(:priya, :locals => {:accounts => accounts})
+  erb(:ind, :locals => {:accounts => accounts})
 end
 
-get '/sonia' do
-  accounts = process_csv
-  erb(:sonia, :locals => {:accounts => accounts})
-end
+put '/products/:id' do
+  @product = Product.find_by_id(params[:id])
 
+  if @product
+    @product.name = "Macbook Pro"
+    @product.save
+  else
+    halt 404, "Product not found"
+  end
