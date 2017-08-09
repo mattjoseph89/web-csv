@@ -23,7 +23,3 @@ get '/sonia' do
   erb(:sonia, :locals => {:accounts => accounts})
 end
 
-# get '/accounts' do
-#   @name = params['name']
-#   erb(:accounts)
-# end
