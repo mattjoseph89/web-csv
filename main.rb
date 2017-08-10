@@ -4,19 +4,29 @@ require "pry"
 require_relative "./csv.rb"
 require_relative "./file_operations.rb"
 
+# attempting to connect login to users
+
 get '/' do
   erb(:login)
+  target=open("account.log", 'r+')
+  users.include?[params["name"],params["password"]]
 end
+
+#main homepage....eventually goes away???
 
 get '/main' do
   accounts = process_csv
   erb(:main, :locals => {:accounts => accounts})
 end
 
+#admin login path to show all accounts
+
 get '/full' do
   accounts = process_csv
   erb(:all, :locals => {:accounts => accounts})
 end
+
+#individual login path to show single account
 
 get '/ind/:name' do
   accounts = process_csv
@@ -25,6 +35,7 @@ get '/ind/:name' do
 end
 
 # Show the form for adding a new row.
+
 get '/add_row_form' do
   erb(:add_row_form)
 end
