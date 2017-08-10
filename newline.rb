@@ -1,3 +1,5 @@
+require_relative "./file_operations.rb"
+
 filename = ARGV.first
 
 puts "We're going to open #{"file.txt"}"
@@ -26,18 +28,5 @@ line6 = $stdin.gets.chomp
 
 puts "I'm going to write these to the file."
 
-target.write(line1)
-target.write(", ")
-target.write(line2)
-target.write(", ")
-target.write(line3)
-target.write(", ")
-target.write(line4)
-target.write(", ")
-target.write(line5)
-target.write(", ")
-target.write(line6)
-target.write("/n")
-
+add_line(target, line1, line2, line3, line4, line5, line6)
 puts "And finally, we close it."
-target.close
