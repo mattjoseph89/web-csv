@@ -27,14 +27,20 @@ end
 
 # Process the form's submission and actually add the row.
 get '/add_row' do
-  target = open("file.txt", 'a+')
+  target = open("accounts.csv", 'a+')
+  name = params["name"]
+  date = params["date"]
+  payee = params["payee"]
+  category = params["category"]
+  outflow = params["outflow"]
+  inflow = params["inflow"]
 
-  line1 = "Priya"
-  line2 = "1/2/2017"
-  line3 = "ALAMO DRAFTHOUSE"
-  line4 = "Entertainment"
-  line5 = "$0.00"
-  line6 = "$10.30"
+  line1 = name
+  line2 = date
+  line3 = payee
+  line4 = category
+  line5 = outflow
+  line6 = inflow
 
   add_line(target, line1, line2, line3, line4, line5, line6)
 

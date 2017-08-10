@@ -1,6 +1,5 @@
 require_relative "./file_operations.rb"
 
-filename = ARGV.first
 
 puts "We're going to open #{"file.txt"}"
 puts "If you don't want that, hit CTRL-C (^C)."
@@ -11,7 +10,7 @@ $stdin.gets
 puts "Opening the file..."
 target = open("file.txt", 'a+')
 
-puts "Now I'm going to ask you for way too much information."
+puts "Now I'm going to ask you for some information."
 
 print "Name: "
 line1 = $stdin.gets.chomp
