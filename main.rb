@@ -5,6 +5,10 @@ require_relative "./csv.rb"
 require_relative "./file_operations.rb"
 
 get '/' do
+  erb(:login)
+end
+
+get '/main' do
   accounts = process_csv
   erb(:main, :locals => {:accounts => accounts})
 end
