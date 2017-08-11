@@ -4,12 +4,59 @@ require "pry"
 require_relative "./csv.rb"
 require_relative "./file_operations.rb"
 
+enable :sessions
+
 # attempting to connect login to users
 
+def login_is_valid
+  username = params["uname"]
+  password = params["psw"]
+
+  if username == "admin" && password == "letmein"
+    return true
+  else
+    return false
+  end
+end
+
+def logged_in
+  if session["logged_in"] == true
+    return true
+  else
+    return false
+  end
+end
+
+get '/log_them_in' do
+
+  # if their submission of the login form indicates they should be logged in now
+    # session["logged_in"] = true
+  # otherwise...
+  #   return them to the login page.
+
+  if login_is_valid
+    session["logged_in"] = true
+    erb(:main)
+  else
+    erb(:login)
+  end
+end
+
 get '/' do
-  erb(:login)
-  target=open("account.log", 'r+')
-  users.include?[params["name"],params["password"]]
+  # must log in to get any info from website
+
+  # logged in
+    # see the list of links to reports
+
+  # logged out
+    # see the login form
+
+
+  if logged_in
+    erb(:main)
+  else
+    erb(:login)
+  end
 end
 
 #main homepage....eventually goes away???

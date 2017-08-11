@@ -1,2 +1,3 @@
-
-users=[[Sonia,Spassword][Priya,Ppassword]]
+username,password
+Sonia,Spassword
+Priya, Ppassword
