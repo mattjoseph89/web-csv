@@ -12,7 +12,7 @@ def login_is_valid
   username = params["uname"]
   password = params["psw"]
 
-  if username == "admin" && password == "letmein"
+  if username == "admin" && password == "password"
     return true
   else
     return false
@@ -59,7 +59,7 @@ get '/' do
   end
 end
 
-#main homepage....eventually goes away???
+#main homepage
 
 get '/main' do
   accounts = process_csv
@@ -108,3 +108,12 @@ get '/add_row' do
 
   erb(:success)
 end
+
+# logoout
+
+get '/log_out' do
+  session.clear
+  erb(:login)
+end
+
+

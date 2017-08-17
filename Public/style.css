@@ -1,0 +1,117 @@
+h1 {
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Raleway', sans-serif;
+    font-size:50px;
+}
+
+li {
+    color:black;
+    font-size:40px;
+    font-weight:bold;
+    text-align:center;
+    width:40%;
+    margin: 0 auto;
+    font-family: 'Roboto Mono', monospace;
+
+}
+
+form {font-size:24px;
+      font-family: 'Roboto Mono', monospace;
+}
+
+/*login page*/
+
+
+/*background*/
+
+body {
+    background-image: url("background.png");
+}
+
+
+
+/*Table Settings*/
+
+
+th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    background-color: #99d8ef;
+    color: white;
+}
+
+tr {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ededed;
+    color: black;
+    font-family: 'Roboto Mono', monospace;
+    font-size:24px;
+}
+
+/*td, #account th {
+    border: 1px solid #ddd;
+    padding: 8px;
+
+#account {
+   font-family: 'Roboto Mono', monospace;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#account tr:nth-child(even){background-color: #f2f2f2;}
+
+#account tr:hover {background-color: #ddd;}*/
+
+/*login page*/
+
+
+/* Bordered form */
+form {
+    border: 50spx solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 40%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #99d8ef;
+    color: white;
+    text-shadow: 2px 2px #6c7069;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-family: 'Roboto Mono', monospace;
+    font-size:24px;
+
+}
+
+/* Add a hover effect for buttons */
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+.wrapper{
+    width:90%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 200px;
+}   
+

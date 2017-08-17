@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="<%= url("/styles.css") %>">
-  <title> <%= name %>'s Account</title>
+<html lang="en-us">
+
+<head>  
+<meta charset="utf-8">
+<title>"<%= name %>"</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway:700i|Roboto+Mono:500" rel="stylesheet">
 </head>
-<body>
+
+<body class="wrapper">
+
   <table>
     <tr>
       <th>Account: <%= name %> | Balance: <%= info[:tally].round(2) %> </th>
@@ -22,5 +27,13 @@
       <td><center>$<%= c_info[:average_transaction_cost].round(2).to_s %></center></td>
     </tr><% end %>
   </table>
+
+      <a href="/add_row_form">
+      <button>Add Transaction</button>
+      <a href="/main">
+      <button>Home</button>
+      <a href="/log_out">
+      <button>Logout</button>
+
 </body>
 </html>
