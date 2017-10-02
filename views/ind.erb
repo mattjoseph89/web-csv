@@ -4,7 +4,7 @@
 <head>  
 <meta charset="utf-8">
 <title>"<%= name %>"</title>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="/style.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:700i|Roboto+Mono:500" rel="stylesheet">
 </head>
 
@@ -12,9 +12,7 @@
 
   <table>
     <tr>
-      <th>Account: <%= name %> | Balance: <%= info[:tally].round(2) %> </th>
-      <th></th>
-      <th> </th>
+      <th colspan="3">Account: <%= name %> | Balance: <%= info[:tally].round(2) %> </th>
     </tr>
     <tr>
       <th>Category</th>
